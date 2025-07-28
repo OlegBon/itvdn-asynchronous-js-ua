@@ -28,7 +28,7 @@ let selectedSeason = ""; // Вибраний сезон туру
 // Вона перевіряє, чи всі необхідні тури доступні, і формує список вибраних властивостей туру та сезону
 // Повертає проміс, який буде виконано або відхилено в залежності від наявності турів
 // Якщо тури відсутні, проміс буде відхилено з повідомленням про помилку
-let getOrder = (tours, season, selection) => {
+let getOrder = (tours, season) => {
   missingTours = tours.filter((tour) => !allTours.tours.includes(tour));
   isAllGood = !missingTours.length;
   selectedTours = allTours.tours.filter((tour) => tours.includes(tour));
